@@ -1,17 +1,41 @@
 import React from 'react'
-import { createDrawerNavigator } from 'react-navigation'
+import { createBottomTabNavigator } from 'react-navigation'
 import Home from '../views/Home'
-import Test from '../views/Test'
+import HotOffer from '../views/HotOffer'
+import Profile from '../views/Profile'
+import Cart from '../views/Cart'
+import Search from '../views/Search'
 
-const AppRouteConfigs = {
+const AppRouteConfig = {
   Home: {
     screen: Home
   },
-  Test: {
-    screen: Test
+  HotOffer: {
+    screen: HotOffer
   },
+  Cart: {
+    screen: Cart
+  },
+  Search: {
+    screen: Search
+  },
+  Profile: {
+    screen: Profile
+  },
+
 }
 
-const AppNavigator = createDrawerNavigator(AppRouteConfigs)
+const BottomTabNavigatorConfig = {
+  tabBarOptions: {
+    style: {
+      backgroundColor: '#333333',
+      textColor: '#adadad',
+      fontSize: '16px',
+    },
+  }
+
+}
+
+const AppNavigator = createBottomTabNavigator(AppRouteConfig, BottomTabNavigatorConfig)
 
 export default AppNavigator

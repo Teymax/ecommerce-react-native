@@ -23,7 +23,7 @@ class AuthStartScreen extends Component {
         <View style={style.welcome}>
           <Text style={style.title}>Welcome to <Text style={{fontWeight: 'bold'}}>Shop Cart</Text></Text>
         </View>
-        <RectBlueButton title="Get Started" />
+        <RectBlueButton title="Get Starteds" />
       </View>
     )
   }

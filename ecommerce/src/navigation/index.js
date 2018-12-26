@@ -1,36 +1,19 @@
 import React from 'react'
 import { SafeAreaView, ScrollView, View } from 'react-native'
-import { createDrawerNavigator, DrawerItems, createSwitchNavigator, createBottomTabNavigator } from 'react-navigation'
+import { createSwitchNavigator} from 'react-navigation'
 import Home from '../views/Home'
 import Test from '../views/Test'
+import AuthNavigator from './auth-navigator'
+import AppNavigator from './app-navigator'
 
-const AppRouteConfigs = {
-  Home: {
-    screen: Home
+const MainNavigator = createSwitchNavigator(
+  {
+    Auth: AuthNavigator,
+    App: AppNavigator
   },
-  Test: {
-    screen: Test
-  },
-}
-
-const DrawerComponent = props => (
-  <SafeAreaView style={{flex: 1}}>
-    <View style={{height: 80, alignItems: 'center', justifyContent: 'center'}}>
-      
-    </View>
-    <ScrollView>
-      <DrawerItems {...props} />
-    </ScrollView>
-  </SafeAreaView>
+  {
+    initialRouteName: 'Auth'
+  }
 )
 
-const AppNavigator = createBottomTabNavigator({
-  Home: {
-    screen: Home
-  },
-  Test: {
-    screen: Test
-  },
-})
-
-export default AppNavigator
+export default MainNavigator

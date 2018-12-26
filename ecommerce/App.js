@@ -11,7 +11,7 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 import { reduxifyNavigator } from 'react-navigation-redux-helpers'
 import store from './src/store'
 import { Provider, connect } from 'react-redux'
-import AppNavigator from './src/navigation'
+import MainNavigator from './src/navigation'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -20,7 +20,7 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-const App = reduxifyNavigator(AppNavigator, 'root')
+const App = reduxifyNavigator(MainNavigator, 'root')
 const mapStateToProps = state => ({
   state: state.nav
 })

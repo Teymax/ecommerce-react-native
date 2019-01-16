@@ -1,18 +1,12 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import {View, Text, Image, ScrollView, StyleSheet, Button, Picker, Modal} from 'react-native'
 
 class ProductCard extends Component {
-  constructor(props) {
-    super(props)
-  }
-  render () {
+  render() {
     return (
       <View>
-        <Text>Hello</Text>
+        <Text>This is an Product Card Page!</Text>
       </View>
-    )
+    );
   }
 }
-
-export default connect(null, null)(Home)

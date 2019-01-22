@@ -30,6 +30,9 @@ const AppRouteConfig = {
 
 const BottomTabNavigatorConfig = {
   tabBarOptions: {
+    labelStyle: {
+      fontSize: 16,
+    },
     style: {
       backgroundColor: '#333333',
       textColor: '#adadad',

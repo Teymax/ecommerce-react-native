@@ -6,9 +6,9 @@ import { View, Text,
 import { connect } from 'react-redux'
 
 
-class Home extends Component {
-  static navigationOptions = {
-    draverLabel: 'home'
+class Profile extends Component {
+  static tabBarOptions = {
+    tabLabel: 'Profile 123'
   }
 
   constructor(props) {
@@ -17,10 +17,10 @@ class Home extends Component {
   render () {
     return (
       <View>
-        <Text>Navigation</Text>
+        <Text>Profile</Text>
       </View>
     )
   }
 }
 
-export default connect(null, null)(Home)
+export default connect(null, null)(Profile)

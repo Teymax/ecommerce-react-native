@@ -6,9 +6,9 @@ import { View, Text,
 import { connect } from 'react-redux'
 
 
-class Home extends Component {
+class Cart extends Component {
   static navigationOptions = {
-    draverLabel: 'home'
+    draverLabel: 'My cart'
   }
 
   constructor(props) {
@@ -17,10 +17,10 @@ class Home extends Component {
   render () {
     return (
       <View>
-        <Text>Navigation</Text>
+        <Text>Cart</Text>
       </View>
     )
   }
 }
 
-export default connect(null, null)(Home)
+export default connect(null, null)(Cart)

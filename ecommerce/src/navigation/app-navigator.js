@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from 'react-navigation'
 import Home from '../views/Home'
 import HotOffer from '../views/HotOffer'
 import Profile from '../views/Profile'
+import ProductCard from '../views/ProductCard'
 import Cart from '../views/Cart'
 import Search from '../views/Search'
 
@@ -22,7 +23,9 @@ const AppRouteConfig = {
   Profile: {
     screen: Profile
   },
-
+  Product: {
+    screen: ProductCard
+  },
 }
 
 const BottomTabNavigatorConfig = {

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { View, Text,
   TouchableOpacity, Button,
-  ImageBackground, StyleSheet ,
-   Dimensions, TextInput} from 'react-native'
+  ImageBackground, StyleSheet, Image,
+   Dimensions, TextInput, ScrollView } from 'react-native'
 import { connect } from 'react-redux'
 
 
@@ -15,9 +15,15 @@ class Home extends Component {
     super(props);
     this.state = {
       categories: [
-        { title: 'Man wear' },
-        { title: 'Women wear'},
-        { title: 'Kids wear'},
+        { title: 'Man wear',
+          image: require('../images/mans.png'),
+        },
+        { title: 'Women wear',
+          image: require('../images/womans.png'),
+      },
+        { title: 'Kids wear',
+          image: require('../images/kids.png'),
+      },
       ],
     };
   }
@@ -25,14 +31,17 @@ class Home extends Component {
   viewCategories(){
     return (
       <View style={{flexDirection: 'column'}}>
+
       { this.state.categories.map((item, key)=>(
           (key == 0)
           ?
           <View style={styles.categoryItem} key={key}>
+            <Image source={item.image} style={{width: "100%"}}/>
             <Text style={styles.categoryButton}  > { item.title }</Text>
           </View>
           :
           <View style={styles.categoryItem} key={key}>
+            <Image source={item.image} style={{width: "100%"}}/>
             <Text style={styles.categoryButton} > { item.title }</Text>
           </View>
         )
@@ -44,7 +53,9 @@ class Home extends Component {
   render () {
     return (
       <View>
+        <ScrollView>
         {this.viewCategories()}
+        </ScrollView>
       </View>
     )
   }
@@ -52,7 +63,7 @@ class Home extends Component {
 
 const styles = StyleSheet.create({
   categoryItem: {
-    padding: 40,
+    padding: 10,
   },
   categoryButton: {
     padding: 10,
